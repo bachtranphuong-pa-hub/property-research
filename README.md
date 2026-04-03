@@ -1,9 +1,9 @@
 # Property Research — RCC Strategic Advisory
 
-| Tài sản | Địa chỉ | Trạng thái | EN | VI |
-|---|---|---|---|---|
-| 369B Nguyễn Trãi | Q1, TP.HCM | Đang xem xét mua | [EN](369b-nguyen-trai/) | — |
-| Opera A05.09+10 | Metropole Thủ Thiêm | Mua 177.5 tỷ · Đang bán 240 tỷ | [EN](opera-metropole-thu-thiem/) | — |
-| The Verse Lisbon | 39 Rua de São Bento | €15M ask · NDA required | [EN](the-verse-lisbon/) | [VI](the-verse-lisbon-vi/) |
+| Asset | Address | Status | EN | VI | IM |
+|---|---|---|---|---|---|
+| 369B Nguyễn Trãi | Q1, TP.HCM | Under consideration | [EN](369b-nguyen-trai/) | — | — |
+| Opera A05.09+10 | Metropole Thủ Thiêm | Bought · Selling at 240 tỷ | [EN](opera-metropole-thu-thiem/) | — | — |
+| The Verse Lisbon | 39 Rua de São Bento | Off-market · €15M ask | [EN](the-verse-lisbon/) | [VI](the-verse-lisbon-vi/) | [IM](the-verse-lisbon-im/) |
 
-*Cập nhật: 03/04/2026*
+*Updated: 03/04/2026*
