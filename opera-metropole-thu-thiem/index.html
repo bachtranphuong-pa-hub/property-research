@@ -12,38 +12,33 @@
   --amber:#b87000;--blue:#1a4fa0;--purple:#6d28d9;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.75}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
 .header{background:var(--navy);padding:48px 40px 36px;position:relative}
-.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;
-  background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
-.htag{display:inline-block;border:1px solid var(--gold);color:var(--gold);
-  font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;
-  padding:5px 16px;margin-bottom:20px}
-.header h1{color:var(--white);font-size:1.8rem;font-weight:normal;margin-bottom:6px;font-family:Arial,sans-serif}
+.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
+.htag{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:5px 16px;margin-bottom:20px}
+.header h1{color:var(--white);font-size:1.8rem;font-weight:bold;margin-bottom:6px}
 .header h1 span{color:var(--gold)}
-.header .hsub{color:rgba(255,255,255,.5);font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px}
+.hsub{color:rgba(255,255,255,.5);font-size:12px;letter-spacing:1px}
 .container{max-width:940px;margin:0 auto;padding:44px 24px 80px}
 .sec{margin-bottom:48px}
-.sec-label{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;
-  color:var(--gold);margin-bottom:5px}
-.sec-title{font-size:1.3rem;font-weight:normal;color:var(--navy);font-family:Arial,sans-serif;
-  border-bottom:1px solid var(--border);padding-bottom:11px;margin-bottom:22px}
-.sec-title small{font-size:.8rem;color:var(--muted);font-family:Arial,sans-serif}
+.sec-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.sec-title{font-size:1.25rem;font-weight:bold;color:var(--navy);border-bottom:1px solid var(--border);padding-bottom:11px;margin-bottom:22px}
+.sec-title small{font-size:.8rem;color:var(--muted);font-weight:normal}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
 @media(max-width:640px){.grid3,.grid2{grid-template-columns:1fr 1fr}}
 .scard{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--gold);padding:16px 18px}
-.scard.red{border-top-color:var(--red)} .scard.red .sv{color:var(--red)}
-.scard.green{border-top-color:var(--green)} .scard.green .sv{color:var(--green)}
-.scard.amber{border-top-color:var(--amber)} .scard.amber .sv{color:var(--amber)}
-.scard.blue{border-top-color:var(--blue)} .scard.blue .sv{color:var(--blue)}
-.scard.purple{border-top-color:var(--purple)} .scard.purple .sv{color:var(--purple)}
-.sl{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
-.sv{font-size:1.5rem;font-weight:bold;color:var(--navy);font-family:Arial,sans-serif}
-.ss{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);margin-top:3px}
-table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:13.5px;margin:16px 0}
+.scard.red{border-top-color:var(--red)}.scard.red .sv{color:var(--red)}
+.scard.green{border-top-color:var(--green)}.scard.green .sv{color:var(--green)}
+.scard.amber{border-top-color:var(--amber)}.scard.amber .sv{color:var(--amber)}
+.scard.blue{border-top-color:var(--blue)}.scard.blue .sv{color:var(--blue)}
+.scard.purple{border-top-color:var(--purple)}.scard.purple .sv{color:var(--purple)}
+.sl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.sv{font-size:1.4rem;font-weight:bold;color:var(--navy)}
+.ss{font-size:11px;color:var(--muted);margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:16px 0}
 thead tr{background:var(--navy);color:var(--white)}
-thead th{padding:11px 14px;text-align:left;font-weight:normal;letter-spacing:.4px}
+thead th{padding:11px 14px;text-align:left;font-weight:bold;letter-spacing:.3px}
 tbody tr:nth-child(odd){background:var(--lgray)}
 tbody tr:nth-child(even){background:var(--white)}
 tbody tr.hi{background:#fff3cd;font-weight:bold}
@@ -51,36 +46,41 @@ tbody tr.hi2{background:#d4edda}
 tbody td{padding:10px 14px;border-bottom:1px solid var(--border)}
 tbody td:first-child{color:var(--navy);font-weight:bold}
 .dark{background:var(--navy);padding:22px 26px;margin:20px 0}
-.dark .dtag{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
-.dark p{font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
+.dark .dtag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.dark p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
 .dark strong{color:var(--gold2)}
 .info{padding:18px 22px;margin:16px 0;border-left:3px solid var(--gold);background:var(--white)}
-.info p{font-size:14px;margin-bottom:7px;font-family:Arial,sans-serif} .info p:last-child{margin-bottom:0}
+.info p{font-size:14px;margin-bottom:7px}.info p:last-child{margin-bottom:0}
+.alert{padding:14px 18px;margin:16px 0;background:#fff3cd;border:1px solid var(--amber);border-left:4px solid var(--amber)}
+.alert p{font-size:13.5px;color:#856404}
 .neg-list{list-style:none;padding:0;margin-top:16px}
-.neg-list li{display:flex;gap:14px;padding:14px 16px;background:var(--white);border:1px solid var(--border);margin-bottom:10px;font-family:Arial,sans-serif;font-size:13.5px}
+.neg-list li{display:flex;gap:14px;padding:14px 16px;background:var(--white);border:1px solid var(--border);margin-bottom:10px;font-size:13.5px}
 .neg-num{background:var(--navy);color:var(--gold);font-weight:bold;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .neg-list li strong{color:var(--navy);display:block;margin-bottom:3px}
 .neg-list li span{color:var(--muted)}
 .vgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
 @media(max-width:600px){.vgrid{grid-template-columns:1fr}}
 .vcard{padding:16px 18px;border:1px solid var(--border)}
-.vcard .vtag{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
-.vcard h4{font-size:14px;color:var(--navy);margin-bottom:8px}
-.vcard p{font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);line-height:1.6}
-.vcard.go{border-top:3px solid var(--green);background:#f0fbf4} .vcard.go .vtag{color:var(--green)}
-.vcard.cau{border-top:3px solid var(--amber);background:#fffdf0} .vcard.cau .vtag{color:var(--amber)}
-.vcard.no{border-top:3px solid var(--red);background:#fdf0f0} .vcard.no .vtag{color:var(--red)}
-.vcard.inf{border-top:3px solid var(--blue);background:#f0f4ff} .vcard.inf .vtag{color:var(--blue)}
+.vcard .vtag{font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.vcard h4{font-size:14px;color:var(--navy);margin-bottom:8px;font-weight:bold}
+.vcard p{font-size:12.5px;color:var(--muted);line-height:1.6}
+.vcard.go{border-top:3px solid var(--green);background:#f0fbf4}.vcard.go .vtag{color:var(--green)}
+.vcard.cau{border-top:3px solid var(--amber);background:#fffdf0}.vcard.cau .vtag{color:var(--amber)}
+.vcard.no{border-top:3px solid var(--red);background:#fdf0f0}.vcard.no .vtag{color:var(--red)}
+.vcard.inf{border-top:3px solid var(--blue);background:#f0f4ff}.vcard.inf .vtag{color:var(--blue)}
+.owner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px}
+@media(max-width:600px){.owner-grid{grid-template-columns:1fr 1fr}}
+.owner-card{background:var(--white);border:1px solid var(--border);padding:12px 14px;text-align:center}
+.owner-card .oname{font-size:13px;font-weight:bold;color:var(--navy);margin-bottom:4px}
+.owner-card .opct{font-size:1.2rem;font-weight:bold;color:var(--blue)}
+.owner-card .oamt{font-size:11px;color:var(--muted);margin-top:2px}
+.owner-card.highlight{border-top:3px solid var(--gold);background:#fffdf0}
 .footer{background:var(--navy);padding:24px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
-.footer p{font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.8px}
+.footer p{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.8px}
 .footer .fb{color:var(--gold);font-size:12px}
-.bar-wrap{margin:4px 0}
-.bar{height:10px;border-radius:5px;display:inline-block}
-.pill{display:inline-block;font-family:Arial,sans-serif;font-size:11px;letter-spacing:1px;padding:3px 10px;border:1px solid;border-radius:2px;font-weight:bold}
+.pill{display:inline-block;font-size:11px;letter-spacing:1px;padding:3px 10px;border:1px solid;border-radius:2px;font-weight:bold}
 .pill.g{color:var(--green);border-color:var(--green);background:#f0fbf4}
 .pill.a{color:var(--amber);border-color:var(--amber);background:#fffdf0}
-.pill.r{color:var(--red);border-color:var(--red);background:#fdf0f0}
-.comp-note{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);font-style:italic;margin-top:4px}
 </style>
 </head>
 <body>
@@ -88,23 +88,25 @@ tbody td:first-child{color:var(--navy);font-weight:bold}
 <div class="header">
   <div class="htag">RCC Strategic Advisory · Confidential · 03/04/2026</div>
   <h1>Investment Briefing<br><span>Opera Residence — A05.09 + A05.10</span></h1>
-  <p class="hsub">The Metropole Thủ Thiêm · 7PN gộp · Sân vườn 268m² · Mua 11/2025</p>
+  <p class="hsub">The Metropole Thủ Thiêm · 7PN gộp · Sân vườn 268m² · Mua 11/2025 · Nhóm đầu tư 6 người</p>
 </div>
 
 <div class="container">
 
-<!-- MỤC 1: TÀI SẢN -->
+<!-- MỤC 1: TÀI SẢN & CẤU TRÚC ĐẦU TƯ -->
 <div class="sec">
   <div class="sec-label">Mục 01</div>
-  <h2 class="sec-title">Thông Tin Tài Sản</h2>
+  <h2 class="sec-title">Thông Tin Tài Sản & Cấu Trúc Đầu Tư</h2>
+
   <div class="grid3">
-    <div class="scard"><div class="sl">Giá Mua Vào</div><div class="sv">175 tỷ</div><div class="ss">Tháng 11/2025</div></div>
-    <div class="scard amber"><div class="sl">Vốn Tự Có (30%)</div><div class="sv">52.5 tỷ</div><div class="ss">Vay 70% = 122.5 tỷ</div></div>
-    <div class="scard"><div class="sl">Lãi Suất</div><div class="sv">6.3%</div><div class="ss">Ưu đãi 2 năm đầu</div></div>
-    <div class="scard"><div class="sl">Thông Thủy (2 căn)</div><div class="sv">283.5 m²</div><div class="ss">160.7 + 122.75 m²</div></div>
-    <div class="scard"><div class="sl">Sân Vườn</div><div class="sv">268.1 m²</div><div class="ss">166.32 + 101.82 m² · Tầng 05</div></div>
-    <div class="scard blue"><div class="sl">m² Hiệu Dụng</div><div class="sv">524.8 m²</div><div class="ss">TT + SV×90%</div></div>
+    <div class="scard"><div class="sl">Giá Mua</div><div class="sv">177.5 tỷ</div><div class="ss">Tháng 11/2025</div></div>
+    <div class="scard blue"><div class="sl">Khoản Vay (VietinBank)</div><div class="sv">113.38 tỷ</div><div class="ss">LTV 63.9% · Ân hạn gốc 12 tháng</div></div>
+    <div class="scard amber"><div class="sl">Vốn Góp Thực Tế</div><div class="sv">64.12 tỷ</div><div class="ss">6 nhà đầu tư góp chung</div></div>
+    <div class="scard"><div class="sl">Lãi Suất Ưu Đãi</div><div class="sv">6.3%/năm</div><div class="ss">2 năm đầu · Sau đó ~8–10%</div></div>
+    <div class="scard"><div class="sl">Lãi Hàng Tháng</div><div class="sv">595.2 tr</div><div class="ss">Interest-only (ân hạn gốc)</div></div>
+    <div class="scard green"><div class="sl">Giá Bán Mục Tiêu</div><div class="sv">240 tỷ</div><div class="ss">Flip trong 12–18 tháng</div></div>
   </div>
+
   <table>
     <thead><tr><th>Căn</th><th>Loại</th><th>Thông Thủy</th><th>Sân Vườn</th><th>Tim Tường</th></tr></thead>
     <tbody>
@@ -113,70 +115,119 @@ tbody td:first-child{color:var(--navy);font-weight:bold}
       <tr class="hi2"><td>Tổng 2 căn</td><td>7 phòng ngủ</td><td><strong>283.45 m²</strong></td><td><strong>268.14 m²</strong></td><td>314.92 m²</td></tr>
     </tbody>
   </table>
+
+  <h3 style="font-size:14px;font-weight:bold;color:var(--navy);margin:20px 0 12px">Cấu Trúc Sở Hữu (6 Nhà Đầu Tư)</h3>
+  <div class="owner-grid">
+    <div class="owner-card highlight">
+      <div class="oname">Bach Tran (anh)</div>
+      <div class="opct">7.80%</div>
+      <div class="oamt">Vốn góp: 5.0 tỷ</div>
+    </div>
+    <div class="owner-card">
+      <div class="oname">NDQ (anh Quang)</div>
+      <div class="opct">53.17%</div>
+      <div class="oamt">Vốn góp: 34.095 tỷ</div>
+    </div>
+    <div class="owner-card">
+      <div class="oname">NHY</div>
+      <div class="opct">24.02%</div>
+      <div class="oamt">Vốn góp: 15.4 tỷ</div>
+    </div>
+    <div class="owner-card">
+      <div class="oname">Yến Linh + Steve</div>
+      <div class="opct">8.58%</div>
+      <div class="oamt">Vốn góp: 5.5 tỷ</div>
+    </div>
+    <div class="owner-card">
+      <div class="oname">Thùy Linh</div>
+      <div class="opct">4.29%</div>
+      <div class="oamt">Vốn góp: 2.75 tỷ</div>
+    </div>
+    <div class="owner-card">
+      <div class="oname">DG</div>
+      <div class="opct">2.14%</div>
+      <div class="oamt">Vốn góp: 1.375 tỷ</div>
+    </div>
+  </div>
 </div>
 
-<!-- MỤC 2: CHI PHÍ -->
+<!-- MỤC 2: P&L THEO KỊCH BẢN -->
 <div class="sec">
   <div class="sec-label">Mục 02</div>
-  <h2 class="sec-title">Chi Phí Đầu Tư Thực Tế (5 Tháng Nắm Giữ)</h2>
-  <div class="grid3">
-    <div class="scard red"><div class="sl">Lãi Vay 5 Tháng</div><div class="sv">3.22 tỷ</div><div class="ss">122.5 tỷ × 6.3% × 5/12</div></div>
-    <div class="scard red"><div class="sl">Thuế Sang Tên 2%</div><div class="sv">3.50 tỷ</div><div class="ss">Một lần khi mua</div></div>
-    <div class="scard amber"><div class="sl">Tổng Chi Phí</div><div class="sv">181.7 tỷ</div><div class="ss">Giá mua + thuế + lãi</div></div>
-  </div>
-  <div class="info">
-    <p><strong>Chi phí thực tế/m² hiệu dụng:</strong> 181.7 tỷ ÷ 524.8 m² = <strong>346 triệu/m²</strong></p>
-    <p><strong>Lãi vay hàng tháng:</strong> 122.5 tỷ × 6.3% / 12 = <strong>643 triệu VND/tháng</strong> — là chi phí cơ hội cần tính vào giá bán mỗi tháng chờ.</p>
-  </div>
-</div>
-
-<!-- MỤC 3: THỊ TRƯỜNG -->
-<div class="sec">
-  <div class="sec-label">Mục 03</div>
-  <h2 class="sec-title">Phân Tích Thị Trường Opera Residence <small>· Tháng 3–4/2026</small></h2>
+  <h2 class="sec-title">Phân Tích P&L Theo Thời Gian Nắm Giữ</h2>
 
   <div class="dark">
-    <div class="dtag">Bối Cảnh Thị Trường Thủ Thiêm 2026</div>
-    <p>Thủ Thiêm là khu vực tăng trưởng nhanh nhất HCM 2026. Luxury segment kỳ vọng tăng giá <strong>8–10%/năm</strong>. Thu Duc City Plan (Jan 2025) hỗ trợ phát triển dài hạn. Opera Residence = sản phẩm khan hiếm nhất trong phân khúc này.</p>
+    <div class="dtag">Giả Định Cơ Sở (từ file Excel)</div>
+    <p>Giá mua: <strong>177.5 tỷ</strong> · Vay: <strong>113.38 tỷ</strong> (LTV 63.9%) · Vốn góp: <strong>64.12 tỷ</strong><br/>
+    Giá bán mục tiêu: <strong>240 tỷ</strong> · Chi phí bán: 1% · Lãi suất: 6.3% (năm 1–2)</p>
   </div>
 
   <table>
-    <thead><tr><th>Comparable</th><th>Diện Tích</th><th>Giá</th><th>Giá/m²</th><th>Ghi Chú</th></tr></thead>
+    <thead><tr><th>Kịch Bản</th><th>Giá Bán</th><th>Lãi Vay</th><th>LN Ròng (project)</th><th>ROI Vốn Góp</th><th>IRR/năm</th></tr></thead>
+    <tbody>
+      <tr class="hi2"><td>Flip 12 tháng @ 6.3%</td><td>240 tỷ</td><td>7.14 tỷ</td><td><strong>53.07 tỷ</strong></td><td><strong>82.8%</strong></td><td><strong>~90%</strong></td></tr>
+      <tr><td>Flip 18 tháng @ 6.5%</td><td>240 tỷ</td><td>11.05 tỷ</td><td>49.05 tỷ</td><td>76.5%</td><td>~46%</td></tr>
+      <tr><td>Flip 12 tháng — giá 210 tỷ</td><td>210 tỷ</td><td>7.14 tỷ</td><td>23.07 tỷ</td><td>36.0%</td><td>~36%</td></tr>
+      <tr><td>Flip 12 tháng — giá 225 tỷ</td><td>225 tỷ</td><td>7.14 tỷ</td><td>38.07 tỷ</td><td>59.4%</td><td>~59%</td></tr>
+      <tr><td>Breakeven (ROI = 0)</td><td>~179 tỷ</td><td>7.14 tỷ</td><td>0</td><td>0%</td><td>—</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:14px;font-weight:bold;color:var(--navy);margin:20px 0 12px">Phần Của Bach Tran (7.80% · Vốn 5 tỷ)</h3>
+  <table>
+    <thead><tr><th>Kịch Bản</th><th>Lãi Phải Trả (phần)</th><th>Net Profit</th><th>Tổng Nhận Về</th><th>ROI</th></tr></thead>
+    <tbody>
+      <tr class="hi"><td>Bán 240 tỷ · 12 tháng</td><td>557 tr</td><td><strong>4.14 tỷ</strong></td><td><strong>9.14 tỷ</strong></td><td><strong>82.8%</strong></td></tr>
+      <tr><td>Bán 240 tỷ · 18 tháng</td><td>861 tr</td><td>3.83 tỷ</td><td>8.83 tỷ</td><td>76.5%</td></tr>
+      <tr><td>Bán 210 tỷ · 12 tháng</td><td>557 tr</td><td>1.80 tỷ</td><td>6.80 tỷ</td><td>36.0%</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MỤC 3: CÁC GÓI VAY -->
+<div class="sec">
+  <div class="sec-label">Mục 03</div>
+  <h2 class="sec-title">Gói Vay VietinBank — So Sánh Lựa Chọn</h2>
+
+  <table>
+    <thead><tr><th>Tiêu Chí</th><th>Gói 1 — "Solid Foundation"</th><th>Gói 2 — "Consumer Promo"</th></tr></thead>
+    <tbody>
+      <tr><td>Kỳ ưu đãi</td><td>12M=5.8% · 18M=6.3% · 24M=6.5%</td><td>12M=6.0% · 18M=6.5%</td></tr>
+      <tr><td>Phí dịch vụ (SPDV)</td><td>0.2% khoản vay (~227 tr)</td><td>0.5% khoản vay (~567 tr)</td></tr>
+      <tr><td>Trả nợ trước hạn</td><td>Không được trong kỳ ưu đãi (phạt 1%)</td><td>Không được &lt;12 tháng, miễn phí sau đó</td></tr>
+      <tr><td>Tổng chi phí (nếu flip 12 tháng)</td><td>~9.4 tỷ</td><td>~8.6 tỷ</td></tr>
+      <tr class="hi2"><td>Phù hợp nếu</td><td>Hold 18–24 tháng</td><td>Bán trong ~12 tháng ← Kịch bản target</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info">
+    <p><strong>Khuyến nghị từ file:</strong> Nếu mục tiêu flip 12 tháng → Gói 2 (6.0%) tổng chi phí thấp hơn ~800 triệu so với Gói 1. Gói 1 phù hợp hơn nếu quyết định hold dài hơn.</p>
+  </div>
+</div>
+
+<!-- MỤC 4: THỊ TRƯỜNG -->
+<div class="sec">
+  <div class="sec-label">Mục 04</div>
+  <h2 class="sec-title">Phân Tích Thị Trường Opera Residence <small>· 2025–2026</small></h2>
+
+  <div class="dark">
+    <div class="dtag">Bối Cảnh Thủ Thiêm 2026</div>
+    <p>Thủ Thiêm là khu vực tăng trưởng nhanh nhất HCM. Luxury segment dự báo tăng <strong>8–10%/năm</strong>. Thu Duc City Plan (Jan 2025) hỗ trợ phát triển dài hạn. Opera Residence = sản phẩm premium nhất khu vực, cách Q1 CBD chỉ <strong>1.3km</strong>.</p>
+  </div>
+
+  <table>
+    <thead><tr><th>Comparable</th><th>DT</th><th>Giá</th><th>Giá/m²</th><th>Ghi Chú</th></tr></thead>
     <tbody>
       <tr><td>Opera 1PN (54m²)</td><td>54m² TT</td><td>12–15.5 tỷ</td><td>222–287 tr/m²</td><td>Low–high floor</td></tr>
       <tr><td>Opera 2PN (75m²)</td><td>75m² TT</td><td>19–22 tỷ</td><td>253–293 tr/m²</td><td>View sông Q1</td></tr>
-      <tr><td>Opera 3PN (122m²)</td><td>~122m² TT</td><td>~20–25 tỷ</td><td>164–205 tr/m²</td><td>Thị trường 3/2026</td></tr>
-      <tr><td>Opera Penthouse (280m²)</td><td>280m² + SV</td><td>49–52 tỷ</td><td>~175–185 tr/m²</td><td>Thô, sân vườn riêng</td></tr>
-      <tr><td>Opera Penthouse (350m²)</td><td>350m² + SV</td><td>150 tỷ</td><td>~429 tr/m²</td><td>Hoàn thiện, view đặc biệt</td></tr>
-      <tr class="hi"><td><strong>A05.09+10 (Target)</strong></td><td><strong>283m² TT + 268m² SV</strong></td><td><strong>240 tỷ</strong></td><td><strong>457 tr/m² hiệu dụng</strong></td><td>7PN gộp · Unique</td></tr>
-    </tbody>
-  </table>
-  <p class="comp-note">* Comparable 280m² penthouse thô giá 49–52 tỷ là sản phẩm ĐÃ HOÀN THIỆN thấp tầng. 2 căn A05 là mid-floor, 7PN unique không có hàng so sánh trực tiếp trên thị trường.</p>
-
-  <div class="info" style="margin-top:20px">
-    <p><strong>Nhận định định giá:</strong> Offer 210 tỷ từ buyer = <strong>401 tr/m² hiệu dụng</strong>. Mục tiêu 240 tỷ = <strong>457 tr/m²</strong>. Cả 2 mức đều <em>cao hơn đáng kể</em> so với comparable penthouse 280m² (~185 tr/m²). Lý do justify được: <strong>7PN gộp + sân vườn 268m² là sản phẩm ĐỘC NHẤT</strong> trong toàn dự án 646 căn — không có căn thứ 2 tương tự.</p>
-    <p><strong>Kết luận:</strong> Giá 240 tỷ là <strong>aggressive nhưng có cơ sở</strong> với người mua đúng. Không nên so sánh với giá/m² căn nhỏ — phải định vị là "unique mega-unit".</p>
-  </div>
-</div>
-
-<!-- MỤC 4: P&L -->
-<div class="sec">
-  <div class="sec-label">Mục 04</div>
-  <h2 class="sec-title">Phân Tích Lợi Nhuận Các Kịch Bản</h2>
-
-  <table>
-    <thead><tr><th>Kịch Bản</th><th>Giá Bán</th><th>LN Gộp</th><th>Thuế+Phí</th><th>LN Ròng</th><th>ROI Vốn TH</th><th>IRR (annualized)</th></tr></thead>
-    <tbody>
-      <tr><td>Offer hiện tại</td><td>210 tỷ</td><td>35 tỷ</td><td>2.80 tỷ</td><td>25.5 tỷ</td><td>48.5%</td><td class="pill a" style="display:table-cell">117%/năm</td></tr>
-      <tr class="hi"><td>Mục tiêu anh Quang</td><td><strong>240 tỷ</strong></td><td><strong>65 tỷ</strong></td><td><strong>3.70 tỷ</strong></td><td><strong>54.6 tỷ</strong></td><td><strong>104%</strong></td><td><strong style="color:var(--green)">250%/năm</strong></td></tr>
-      <tr><td>Điểm giữa</td><td>225 tỷ</td><td>50 tỷ</td><td>3.25 tỷ</td><td>40 tỷ</td><td>76%</td><td>183%/năm</td></tr>
-      <tr class="hi2"><td>Walk-away tối thiểu</td><td>200 tỷ</td><td>25 tỷ</td><td>2.50 tỷ</td><td>16 tỷ</td><td>30%</td><td>73%/năm</td></tr>
+      <tr><td>Opera Penthouse (280m²) thô</td><td>280m² + SV</td><td>49–52 tỷ</td><td>~175–185 tr/m²</td><td>Thô, sân vườn riêng</td></tr>
+      <tr><td>Opera Penthouse (350m²) hoàn thiện</td><td>350m² + SV</td><td>150 tỷ</td><td>~429 tr/m²</td><td>View đặc biệt</td></tr>
+      <tr class="hi"><td>A05.09+10 (Target bán)</td><td>283m² TT + 268m² SV</td><td><strong>240 tỷ</strong></td><td><strong>~457 tr/m² hiệu dụng</strong></td><td>7PN gộp · Unique</td></tr>
     </tbody>
   </table>
 
-  <div class="info">
-    <p><strong>Chi phí giữ thêm mỗi tháng:</strong> Lãi vay 643 tr + cơ hội chi phí → mỗi tháng chờ thêm "mất" ~700–800 triệu. Sau 3 tháng nữa (tháng 7/2026): tổng chi phí tăng ~2 tỷ → cần bán cao hơn tương đương để giữ nguyên ROI.</p>
-    <p><strong>Điểm mạnh deal:</strong> Dù bán 210 tỷ, ROI vốn tự có vẫn là <strong>48.5%</strong> trong 5 tháng — đã là xuất sắc. Ở 240 tỷ → <strong>104% ROI trong 5 tháng</strong>.</p>
+  <div class="alert">
+    <p><strong>Lưu ý định giá:</strong> A05.09+10 là mid-floor (tầng 5), sân vườn 268m² — không có hàng so sánh trực tiếp trong 646 căn. Giá 240 tỷ justified bằng tính <em>unique</em> của sản phẩm, không phải giá/m² thuần túy. Cần buyer đúng profile (gia đình siêu giàu, full-floor user).</p>
   </div>
 </div>
 
@@ -187,52 +238,16 @@ tbody td:first-child{color:var(--navy);font-weight:bold}
 
   <div class="dark">
     <div class="dtag">Định Vị Cốt Lõi</div>
-    <p>Đừng bán "2 căn hộ ghép." Hãy bán <strong>"Mega Estate duy nhất tại Metropole — 7 phòng ngủ, sân vườn 268m², căn hộ nguyên sàn độc nhất trong 646 căn."</strong><br/>Buyer profile: gia đình siêu giàu muốn full floor, expat senior executive, hoặc người muốn own entire floor trong landmark building của HCM.</p>
+    <p>Đừng bán "2 căn ghép." Bán <strong>"Mega Private Estate duy nhất tại Metropole — 7PN, sân vườn riêng 268m², căn hộ nguyên sàn không lặp lại trong 646 căn."</strong><br/>Target buyer: gia đình siêu giàu muốn full floor, senior expat executive, hoặc nhà đầu tư muốn trophy asset.</p>
   </div>
 
   <ol class="neg-list">
-    <li>
-      <div class="neg-num">01</div>
-      <div>
-        <strong>Anchor bằng "Không có hàng thứ 2"</strong>
-        <span>Toàn dự án 646 căn không có combo nào tương tự. Đây là sản phẩm một-lần-trong-đời tại Metropole. Buyer muốn mua thì phải trả giá anh Quang muốn — không có option thay thế.</span>
-      </div>
-    </li>
-    <li>
-      <div class="neg-num">02</div>
-      <div>
-        <strong>Counter offer 210 tỷ bằng: "Anh đang hold rất tốt"</strong>
-        <span>Trả lời buyer: "210 tỷ là giá anh chấp nhận nếu cần tiền gấp. Hiện anh không cần. Giá 240 tỷ là giá phù hợp với sản phẩm này. Buyer tiếp theo sẽ trả 240 tỷ khi thị trường Thủ Thiêm tăng thêm 10% trong 6–12 tháng tới."</span>
-      </div>
-    </li>
-    <li>
-      <div class="neg-num">03</div>
-      <div>
-        <strong>Tạo urgency bằng "đang có 2 bên quan tâm"</strong>
-        <span>Nếu thực sự có buyer 210 tỷ, dùng như đòn bẩy với buyer tiềm năng khác: "Hiện có offer 210 tỷ, anh đang xem xét. Nếu bên anh/chị muốn chốt trước thì cần quyết định trong 5 ngày." FOMO là động lực mua hàng số 1 trong luxury segment.</span>
-      </div>
-    </li>
-    <li>
-      <div class="neg-num">04</div>
-      <div>
-        <strong>Định giá lại theo "price per unique feature"</strong>
-        <span>Sân vườn 268m² riêng tư ở tầng 5 là đặc quyền không thể mua ở đâu khác trong khu vực. Tính riêng: SV 268m² × 150 tr/m² = 40 tỷ. TT 283m² × 220 tr/m² = 62 tỷ. Cộng premium combo = 240 tỷ — có logic rõ ràng.</span>
-      </div>
-    </li>
-    <li>
-      <div class="neg-num">05</div>
-      <div>
-        <strong>Điều khoản linh hoạt thay vì giảm giá</strong>
-        <span>Nếu buyer push xuống: thay vì giảm giá → offer payment schedule linh hoạt hơn (50% ngay, 50% sau 6 tháng), hoặc include nội thất cao cấp (~2–3 tỷ) thay vì giảm tiền mặt. Giá niêm yết giữ 240 tỷ.</span>
-      </div>
-    </li>
-    <li>
-      <div class="neg-num">06</div>
-      <div>
-        <strong>Walk-away line rõ ràng</strong>
-        <span>Nội bộ: chấp nhận tối thiểu 220 tỷ nếu buyer là cash buyer, close trong 30 ngày. Dưới 220 tỷ → từ chối, tiếp tục hold (ROI vẫn tốt với lãi vay thấp 6.3%).</span>
-      </div>
-    </li>
+    <li><div class="neg-num">01</div><div><strong>"Không có hàng thứ 2"</strong><span>Toàn dự án 646 căn không có combo tương tự. Buyer muốn mua thì chỉ có 1 lựa chọn — của nhóm anh.</span></div></li>
+    <li><div class="neg-num">02</div><div><strong>Counter offer 210 tỷ: từ chối lịch sự</strong><span>"210 tỷ là giá tôi bán nếu cần gấp. Hiện tôi không cần. Giá hợp lý của sản phẩm này là 240 tỷ. Thị trường Thủ Thiêm tăng 8–10%/năm — buyer tiếp theo sẽ trả 240 tỷ hoặc cao hơn."</span></div></li>
+    <li><div class="neg-num">03</div><div><strong>Tạo urgency — 2 bên đang quan tâm</strong><span>Dùng offer 210 tỷ như đòn bẩy với buyer tiềm năng thứ 2: "Đang có offer 210 tỷ, tôi đang xem xét. Nếu anh/chị quyết định trong 5 ngày, có thể chốt trước." FOMO là động lực mua số 1 trong luxury.</span></div></li>
+    <li><div class="neg-num">04</div><div><strong>Định giá theo component, không phải m²</strong><span>SV 268m² × 150 tr = 40.2 tỷ · TT 283m² × 220 tr = 62.3 tỷ · Premium combo unique = ~137 tỷ · Tổng = 239.5 tỷ ≈ 240 tỷ. Logic rõ ràng, không thể bác bỏ.</span></div></li>
+    <li><div class="neg-num">05</div><div><strong>Linh hoạt điều khoản thay vì giảm giá</strong><span>Buyer push xuống: offer schedule thanh toán linh hoạt (50% ngay + 50% sau 3 tháng), hoặc include nội thất 2–3 tỷ. Giữ giá niêm yết 240 tỷ.</span></div></li>
+    <li><div class="neg-num">06</div><div><strong>Floor nội bộ</strong><span>Minimum chấp nhận: <strong>220 tỷ</strong> (cash buyer, close 30 ngày). Dưới 220 tỷ → tiếp tục hold vì lãi vay chỉ 595 tr/tháng, tài sản tăng ~1.5 tỷ/tháng.</span></div></li>
   </ol>
 </div>
 
@@ -241,64 +256,60 @@ tbody td:first-child{color:var(--navy);font-weight:bold}
   <div class="sec-label">Mục 06</div>
   <h2 class="sec-title">Vị Trí Dự Án</h2>
   <div style="border:1px solid var(--border);background:var(--white);padding:14px">
-    <iframe
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.5!2d106.7127!3d10.7775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fc819f020db%3A0xc481028b4bff226b!2sThe%20Opera%20Residence!5e1!3m2!1svi!2svn!4v1680000000001"
-      width="100%" height="340" style="border:none;display:block"
-      allowfullscreen loading="lazy">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d983.5!2d106.7127!3d10.7775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fc819f020db%3A0xc481028b4bff226b!2sThe%20Opera%20Residence!5e1!3m2!1svi!2svn!4v1680000000001"
+      width="100%" height="320" style="border:none;display:block" allowfullscreen loading="lazy">
     </iframe>
-    <p style="font-family:Arial,sans-serif;font-size:11px;color:var(--muted);margin-top:8px">
-      Opera Residence · 10.7775°N, 106.7127°E · Cách Q1 CBD ~1.3km · Cạnh cầu Thủ Thiêm 2 · View sông Sài Gòn
-    </p>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">Opera Residence · lat 10.7775, lon 106.7127 · Cách Q1 CBD ~1.3km · Cạnh cầu Thủ Thiêm 2</p>
   </div>
-
-  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:16px;font-family:Arial,sans-serif;font-size:13px">
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-top:14px;font-size:13px">
     <div style="background:var(--white);border:1px solid var(--border);padding:14px;text-align:center">
-      <div style="font-size:1.6rem;font-weight:bold;color:var(--navy)">1.3 km</div>
+      <div style="font-size:1.5rem;font-weight:bold;color:var(--navy)">1.3 km</div>
       <div style="color:var(--muted)">đến Q1 CBD</div>
     </div>
     <div style="background:var(--white);border:1px solid var(--border);padding:14px;text-align:center">
-      <div style="font-size:1.6rem;font-weight:bold;color:var(--navy)">2 phút</div>
+      <div style="font-size:1.5rem;font-weight:bold;color:var(--navy)">2 phút</div>
       <div style="color:var(--muted)">qua cầu Thủ Thiêm 2</div>
     </div>
     <div style="background:var(--white);border:1px solid var(--border);padding:14px;text-align:center">
-      <div style="font-size:1.6rem;font-weight:bold;color:var(--navy)">Tầng 05</div>
+      <div style="font-size:1.5rem;font-weight:bold;color:var(--navy)">Tầng 05</div>
       <div style="color:var(--muted)">sân vườn riêng 268m²</div>
     </div>
   </div>
 </div>
 
-<!-- MỤC 7: VERDICT -->
+<!-- MỤC 7: KẾT LUẬN -->
 <div class="sec">
   <div class="sec-label">Mục 07</div>
   <h2 class="sec-title">Kết Luận & Khuyến Nghị</h2>
   <div class="vgrid">
     <div class="vcard go">
-      <div class="vtag">Điểm Mạnh</div>
-      <h4>✅ Deal đang rất tốt</h4>
-      <p>Dù bán 210 tỷ → ROI 48.5% trong 5 tháng. Ở 240 tỷ → 104% ROI. Cả 2 mức đều xuất sắc. Sản phẩm 7PN unique không có đối thủ trực tiếp.</p>
+      <div class="vtag">Deal Rất Tốt</div>
+      <h4>✅ ROI 82.8% trong 12 tháng</h4>
+      <p>Bán 240 tỷ → lợi nhuận ròng 53 tỷ · ROI vốn góp 82.8% · IRR ~90%/năm. Phần Bach Tran: +4.14 tỷ net (vốn vào 5 tỷ). Dù bán 210 tỷ vẫn là ROI 36% — outperform mọi kênh tài chính khác.</p>
     </div>
     <div class="vcard cau">
-      <div class="vtag">Lưu Ý</div>
-      <h4>⚠ Không vội bán</h4>
-      <p>Lãi vay 6.3% vẫn thấp (643 tr/tháng). Thị trường Thủ Thiêm tăng 8–10%/năm. Mỗi tháng chờ = thêm ~1.7 tỷ giá trị tài sản. Hold 6 tháng → giá thị trường tự lên ~250–260 tỷ.</p>
+      <div class="vtag">Lưu Ý Thời Gian</div>
+      <h4>⚠ Lãi suất tăng sau 2 năm</h4>
+      <p>Sau kỳ ưu đãi (cuối 2027), lãi tăng lên ~8–10%/năm — chi phí hàng tháng tăng gần gấp đôi. Mục tiêu flip trong 12–18 tháng là tối ưu nhất.</p>
     </div>
     <div class="vcard inf">
-      <div class="vtag">Giá Đề Xuất</div>
-      <h4>📋 Chiến Lược Giá</h4>
-      <p><strong>Chào: 250 tỷ</strong> (buffer đàm phán)<br/><strong>Target: 240 tỷ</strong> (mục tiêu anh Quang)<br/><strong>Walk-away: 220 tỷ</strong> (cash buyer, 30 ngày)<br/>Counter offer 210 tỷ: từ chối, giữ giá</p>
+      <div class="vtag">Chiến Lược Giá</div>
+      <h4>📋 Chào 250 · Target 240 · Floor 220</h4>
+      <p><strong>Chào:</strong> 250 tỷ (buffer)<br/><strong>Target:</strong> 240 tỷ (ROI 82.8%)<br/><strong>Walk-away:</strong> 220 tỷ nếu cash + 30 ngày<br/>Không accept dưới 210 tỷ trong bất kỳ trường hợp</p>
     </div>
     <div class="vcard go">
-      <div class="vtag">Hành Động</div>
-      <h4>🎯 Bước Tiếp Theo</h4>
-      <p>1. Không accept offer 210 tỷ — counter 240 tỷ<br/>2. Tìm thêm buyer qua network luxury (Savills, CBRE private desk)<br/>3. Đặt timeline: nếu không sell được 220 tỷ+ trong 3 tháng → xem xét lại</p>
+      <div class="vtag">Bước Tiếp Theo</div>
+      <h4>🎯 Hành Động Ngay</h4>
+      <p>1. Counter offer 210 tỷ → đề nghị 240 tỷ<br/>2. Tìm thêm buyer qua Savills/CBRE private desk<br/>3. Nếu không sell 220 tỷ+ trong 3 tháng → họp nhóm xem xét lại</p>
     </div>
   </div>
 
   <div style="margin-top:24px;padding:18px 22px;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--green)">
     <p style="font-size:15px;color:var(--navy);font-weight:bold;margin-bottom:6px">Khuyến Nghị: Chào 250 tỷ · Target 240 tỷ · Floor 220 tỷ</p>
-    <p style="font-family:Arial,sans-serif;font-size:13px;color:var(--muted)">
-      LN ròng tại 240 tỷ: <strong style="color:var(--green)">54.6 tỷ</strong> · ROI vốn tự có 5 tháng: <strong style="color:var(--green)">104%</strong> · IRR annualized: <strong style="color:var(--green)">~250%/năm</strong><br/>
-      Không accept dưới 210 tỷ. Mỗi tháng hold thêm = lãi vay 643 tr nhưng tài sản tăng ~1.7 tỷ → net positive nếu tin vào thị trường.
+    <p style="font-size:13px;color:var(--muted)">
+      LN ròng (project) tại 240 tỷ: <strong style="color:var(--green)">53.07 tỷ</strong> · ROI vốn góp 12 tháng: <strong style="color:var(--green)">82.8%</strong> · IRR: <strong style="color:var(--green)">~90%/năm</strong><br/>
+      Phần Bach Tran (7.8%): Net profit <strong style="color:var(--green)">+4.14 tỷ</strong> trên vốn 5 tỷ bỏ vào (ROI 82.8%)<br/>
+      Breakeven sale price: ~179 tỷ (an toàn tuyệt đối — giá mua 177.5 tỷ đã phủ được gần hết)
     </p>
   </div>
 </div>
@@ -308,9 +319,9 @@ tbody td:first-child{color:var(--navy);font-weight:bold}
 <div class="footer">
   <div>
     <p class="fb">Zera · RCC Strategic Advisory</p>
-    <p>03/04/2026 · Tài liệu nội bộ · Không phổ biến</p>
+    <p>03/04/2026 · Revised từ Excel file "Opera Apartment Calculations - Steve" · Tài liệu nội bộ</p>
   </div>
-  <span class="pill a">PHÂN TÍCH SƠ BỘ</span>
+  <span class="pill a">ĐÃ VERIFY vs. EXCEL</span>
 </div>
 </body>
 </html>
