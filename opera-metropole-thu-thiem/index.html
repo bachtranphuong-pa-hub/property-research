@@ -12,21 +12,21 @@
   --amber:#b87000;--blue:#1a4fa0;--purple:#6d28d9;
 }
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Georgia,serif;background:var(--cream);color:var(--text);line-height:1.75}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.75}
 .header{background:var(--navy);padding:48px 40px 36px;position:relative}
 .header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;
   background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
 .htag{display:inline-block;border:1px solid var(--gold);color:var(--gold);
   font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;
   padding:5px 16px;margin-bottom:20px}
-.header h1{color:var(--white);font-size:1.8rem;font-weight:normal;margin-bottom:6px}
+.header h1{color:var(--white);font-size:1.8rem;font-weight:normal;margin-bottom:6px;font-family:Arial,sans-serif}
 .header h1 span{color:var(--gold)}
 .header .hsub{color:rgba(255,255,255,.5);font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px}
 .container{max-width:940px;margin:0 auto;padding:44px 24px 80px}
 .sec{margin-bottom:48px}
 .sec-label{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;
   color:var(--gold);margin-bottom:5px}
-.sec-title{font-size:1.3rem;font-weight:normal;color:var(--navy);
+.sec-title{font-size:1.3rem;font-weight:normal;color:var(--navy);font-family:Arial,sans-serif;
   border-bottom:1px solid var(--border);padding-bottom:11px;margin-bottom:22px}
 .sec-title small{font-size:.8rem;color:var(--muted);font-family:Arial,sans-serif}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
@@ -39,7 +39,7 @@ body{font-family:Georgia,serif;background:var(--cream);color:var(--text);line-he
 .scard.blue{border-top-color:var(--blue)} .scard.blue .sv{color:var(--blue)}
 .scard.purple{border-top-color:var(--purple)} .scard.purple .sv{color:var(--purple)}
 .sl{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
-.sv{font-size:1.5rem;font-weight:bold;color:var(--navy)}
+.sv{font-size:1.5rem;font-weight:bold;color:var(--navy);font-family:Arial,sans-serif}
 .ss{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);margin-top:3px}
 table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:13.5px;margin:16px 0}
 thead tr{background:var(--navy);color:var(--white)}
@@ -55,7 +55,7 @@ tbody td:first-child{color:var(--navy);font-weight:bold}
 .dark p{font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
 .dark strong{color:var(--gold2)}
 .info{padding:18px 22px;margin:16px 0;border-left:3px solid var(--gold);background:var(--white)}
-.info p{font-size:14px;margin-bottom:7px} .info p:last-child{margin-bottom:0}
+.info p{font-size:14px;margin-bottom:7px;font-family:Arial,sans-serif} .info p:last-child{margin-bottom:0}
 .neg-list{list-style:none;padding:0;margin-top:16px}
 .neg-list li{display:flex;gap:14px;padding:14px 16px;background:var(--white);border:1px solid var(--border);margin-bottom:10px;font-family:Arial,sans-serif;font-size:13.5px}
 .neg-num{background:var(--navy);color:var(--gold);font-weight:bold;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
