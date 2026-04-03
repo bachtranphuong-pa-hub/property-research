@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Investment Briefing — The Verse, Lisbon</title>
+<style>
+:root{
+  --navy:#0a1628;--gold:#c9a84c;--gold2:#e8d48a;
+  --white:#fff;--cream:#f8f6f0;--text:#1a1a2e;--muted:#666680;
+  --border:#ddd8cc;--lgray:#f4f4f8;--red:#c0392b;--green:#1a7a4a;
+  --amber:#b87000;--blue:#1a4fa0;--purple:#6d28d9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:var(--cream);color:var(--text);line-height:1.7}
+.header{background:var(--navy);padding:52px 40px 40px;position:relative}
+.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
+.htag{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:3px;text-transform:uppercase;padding:5px 16px;margin-bottom:20px}
+.header h1{color:var(--white);font-size:2rem;font-weight:bold;margin-bottom:6px}
+.header h1 span{color:var(--gold)}
+.hsub{color:rgba(255,255,255,.5);font-size:12px;letter-spacing:1px;margin-top:4px}
+.hrow{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px}
+.hbadges{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.badge{display:inline-block;font-size:11px;padding:4px 12px;letter-spacing:.5px;font-weight:bold}
+.badge.go{background:var(--green);color:var(--white)}
+.badge.am{background:var(--amber);color:var(--white)}
+.badge.bl{background:var(--blue);color:var(--white)}
+.container{max-width:960px;margin:0 auto;padding:48px 24px 80px}
+.sec{margin-bottom:52px}
+.sec-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.sec-title{font-size:1.25rem;font-weight:bold;color:var(--navy);border-bottom:1px solid var(--border);padding-bottom:11px;margin-bottom:22px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.grid3,.grid2{grid-template-columns:1fr 1fr}}
+.scard{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--gold);padding:16px 18px}
+.scard.green{border-top-color:var(--green)}.scard.green .sv{color:var(--green)}
+.scard.amber{border-top-color:var(--amber)}.scard.amber .sv{color:var(--amber)}
+.scard.blue{border-top-color:var(--blue)}.scard.blue .sv{color:var(--blue)}
+.scard.red{border-top-color:var(--red)}.scard.red .sv{color:var(--red)}
+.scard.purple{border-top-color:var(--purple)}.scard.purple .sv{color:var(--purple)}
+.sl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.sv{font-size:1.4rem;font-weight:bold;color:var(--navy)}
+.ss{font-size:11px;color:var(--muted);margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;margin:16px 0}
+thead tr{background:var(--navy);color:var(--white)}
+thead th{padding:11px 14px;text-align:left;font-weight:bold;letter-spacing:.3px}
+tbody tr:nth-child(odd){background:var(--lgray)}
+tbody tr:nth-child(even){background:var(--white)}
+tbody tr.hi{background:#fff3cd;font-weight:bold}
+tbody tr.hi2{background:#d4edda}
+tbody td{padding:10px 14px;border-bottom:1px solid var(--border)}
+tbody td:first-child{color:var(--navy);font-weight:bold}
+.dark{background:var(--navy);padding:24px 28px;margin:20px 0}
+.dark .dtag{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.dark p{font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
+.dark strong{color:var(--gold2)}
+.info{padding:18px 22px;margin:16px 0;border-left:3px solid var(--gold);background:var(--white)}
+.info p{font-size:14px;margin-bottom:7px}.info p:last-child{margin-bottom:0}
+.warn{padding:14px 18px;margin:16px 0;background:#fff3cd;border:1px solid var(--amber);border-left:4px solid var(--amber)}
+.warn p{font-size:13.5px;color:#856404}
+.buyer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+@media(max-width:640px){.buyer-grid{grid-template-columns:1fr 1fr}}
+.buyer-card{background:var(--white);border:1px solid var(--border);padding:18px;border-top:3px solid var(--blue)}
+.buyer-card h4{font-size:13.5px;font-weight:bold;color:var(--navy);margin-bottom:8px}
+.buyer-card .fit{font-size:11px;font-weight:bold;padding:2px 8px;display:inline-block;margin-bottom:8px;border-radius:2px}
+.buyer-card .fit.high{background:#d4edda;color:var(--green)}
+.buyer-card .fit.med{background:#fff3cd;color:var(--amber)}
+.buyer-card p{font-size:12.5px;color:var(--muted);line-height:1.6}
+.neg-list{list-style:none;padding:0;margin-top:16px}
+.neg-list li{display:flex;gap:14px;padding:14px 16px;background:var(--white);border:1px solid var(--border);margin-bottom:10px;font-size:13.5px}
+.neg-num{background:var(--navy);color:var(--gold);font-weight:bold;min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.neg-list li strong{color:var(--navy);display:block;margin-bottom:3px}
+.neg-list li span{color:var(--muted)}
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media(max-width:600px){.vgrid{grid-template-columns:1fr}}
+.vcard{padding:16px 18px;border:1px solid var(--border)}
+.vcard .vtag{font-size:10px;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.vcard h4{font-size:14px;color:var(--navy);margin-bottom:8px;font-weight:bold}
+.vcard p{font-size:12.5px;color:var(--muted);line-height:1.6}
+.vcard.go{border-top:3px solid var(--green);background:#f0fbf4}.vcard.go .vtag{color:var(--green)}
+.vcard.cau{border-top:3px solid var(--amber);background:#fffdf0}.vcard.cau .vtag{color:var(--amber)}
+.vcard.no{border-top:3px solid var(--red);background:#fdf0f0}.vcard.no .vtag{color:var(--red)}
+.vcard.inf{border-top:3px solid var(--blue);background:#f0f4ff}.vcard.inf .vtag{color:var(--blue)}
+.timeline{list-style:none;padding:0;margin-top:16px;position:relative}
+.timeline::before{content:'';position:absolute;left:13px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline li{display:flex;gap:16px;padding:0 0 20px 0;position:relative}
+.tl-dot{width:28px;height:28px;border-radius:50%;flex-shrink:0;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:bold;color:var(--white);position:relative;z-index:1}
+.tl-dot.go{background:var(--green)}.tl-dot.am{background:var(--amber)}.tl-dot.bl{background:var(--blue)}
+.tl-content strong{display:block;font-size:13.5px;color:var(--navy);margin-bottom:2px}
+.tl-content span{font-size:12.5px;color:var(--muted)}
+.footer{background:var(--navy);padding:24px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.footer p{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.8px}
+.footer .fb{color:var(--gold);font-size:12px}
+.pill{display:inline-block;font-size:11px;letter-spacing:1px;padding:3px 10px;border:1px solid;border-radius:2px;font-weight:bold}
+.pill.g{color:var(--green);border-color:var(--green);background:#f0fbf4}
+.pill.a{color:var(--amber);border-color:var(--amber);background:#fffdf0}
+.stat-row{display:flex;gap:6px;flex-wrap:wrap;margin:14px 0}
+.stat-chip{background:var(--white);border:1px solid var(--border);padding:8px 14px;font-size:13px}
+.stat-chip strong{color:var(--navy);margin-right:4px}
+.stat-chip span{color:var(--muted)}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="hrow">
+    <div>
+      <div class="htag">RCC Strategic Advisory · Confidential · 03/04/2026</div>
+      <h1>The <span>Verse</span></h1>
+      <p class="hsub">39 Rua de São Bento · Misericórdia · Lisbon, Portugal · 15 Apartments · Freehold</p>
+      <div class="hbadges">
+        <span class="badge go">PURSUE</span>
+        <span class="badge bl">HOLD &amp; OPERATE</span>
+        <span class="badge am">NDA REQUIRED</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- MỤC 1: ASSET OVERVIEW -->
+<div class="sec">
+  <div class="sec-label">Section 01</div>
+  <h2 class="sec-title">Asset Overview</h2>
+  <div class="grid3">
+    <div class="scard"><div class="sl">Property Type</div><div class="sv">Boutique Aparthotel</div><div class="ss">15 self-contained apartments</div></div>
+    <div class="scard green"><div class="sl">Tenure</div><div class="sv">Freehold</div><div class="ss">No management contract — unencumbered</div></div>
+    <div class="scard blue"><div class="sl">Operational Since</div><div class="sv">Jan 2025</div><div class="ss">~15 months trading</div></div>
+    <div class="scard"><div class="sl">Guest Score</div><div class="sv">9.7 / 10</div><div class="ss">Booking.com · Exceptional rating</div></div>
+    <div class="scard purple"><div class="sl">Editorial Coverage</div><div class="sv">NYT + Condé Nast</div><div class="ss">+ Mr &amp; Mrs Smith · Tablet Hotels</div></div>
+    <div class="scard amber"><div class="sl">Transaction</div><div class="sv">Off-Market</div><div class="ss">Asset sale OR Going Concern · NDA req.</div></div>
+  </div>
+
+  <div class="dark">
+    <div class="dtag">Micro-Location: Rua de São Bento</div>
+    <p>One of Lisbon's most prestigious addresses. <strong>Fronts Portugal's Parliament building (São Bento Palace)</strong>, surrounded by diplomatic missions, embassies, and cultural institutions. 10-minute walk to Bairro Alto, Chiado, and Príncipe Real — Lisbon's highest-spend leisure corridors. <strong>Very constrained supply</strong>: heritage building regulations limit new hotel development on this street.</p>
+  </div>
+
+  <table>
+    <thead><tr><th>Attribute</th><th>Detail</th></tr></thead>
+    <tbody>
+      <tr><td>Address</td><td>39 Rua de São Bento, 1200-815 Lisboa</td></tr>
+      <tr><td>Quarter</td><td>Misericórdia — diplomatic &amp; cultural corridor</td></tr>
+      <tr><td>Keys</td><td>15 apartments (self-contained)</td></tr>
+      <tr><td>Amenities</td><td>Design-led lobby bar (F&amp;B revenue diversification)</td></tr>
+      <tr><td>Sale structure options</td><td>Real estate only OR Going concern (incl. ops platform)</td></tr>
+      <tr><td>Process</td><td>Confidential off-market · Qualified buyers only · NDA</td></tr>
+      <tr><td>Financial data</td><td>Available post-NDA execution</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MỤC 2: LISBON MARKET -->
+<div class="sec">
+  <div class="sec-label">Section 02</div>
+  <h2 class="sec-title">Lisbon Tourism &amp; Hotel Market</h2>
+
+  <div class="stat-row">
+    <div class="stat-chip"><strong>8.8M</strong><span>visitors to Lisbon 2024</span></div>
+    <div class="stat-chip"><strong>€1.5B+</strong><span>tourism revenue 2024</span></div>
+    <div class="stat-chip"><strong>€114.46</strong><span>market RevPAR 2025 (+2.2% YoY)</span></div>
+    <div class="stat-chip"><strong>+20%</strong><span>RevPAR vs. 2019 pre-Covid peak</span></div>
+    <div class="stat-chip"><strong>€226K</strong><span>avg hotel value/key (HVS 2024)</span></div>
+    <div class="stat-chip"><strong>€300M+</strong><span>hotel transactions 2025</span></div>
+    <div class="stat-chip"><strong>+90%</strong><span>US visitors growth over 4 years</span></div>
+    <div class="stat-chip"><strong>+14.3%</strong><span>Chinese visitor growth 2025</span></div>
+    <div class="stat-chip"><strong>6.21%</strong><span>Portugal tourism CAGR to 2030</span></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Metric</th><th>2024</th><th>2025</th><th>Trend</th></tr></thead>
+    <tbody>
+      <tr><td>Market RevPAR (avg all hotels)</td><td>€112.6</td><td>€114.46</td><td>+2.2% · Stable growth</td></tr>
+      <tr><td>ADR growth</td><td>—</td><td>+2.6%</td><td>Rate-led recovery</td></tr>
+      <tr><td>RevPAR vs. 2019</td><td>+15%</td><td>+20%</td><td>Outpacing pre-Covid</td></tr>
+      <tr><td>US visitors</td><td>+90% vs. 2020</td><td>Continued growth</td><td>Highest-spend segment</td></tr>
+      <tr><td>Chinese visitors</td><td>Recovering</td><td>+14.3%</td><td>Re-awakening — high spenders</td></tr>
+      <tr><td>New supply</td><td>Constrained</td><td>9 new hotels in Lisbon pipeline</td><td>Heritage limits downtown supply</td></tr>
+      <tr class="hi2"><td>Boutique/lifestyle premium vs. market</td><td>+30–50%</td><td>+40–60%</td><td>Widening as demand shifts to experience</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info">
+    <p><strong>Structural tailwinds:</strong> Lisbon is repositioning as a <em>high-value</em> destination — moving away from budget tourism toward quality-spend. City tourism authority is actively promoting the "high-value visitor" strategy. This directly benefits boutique, design-led properties like The Verse.</p>
+    <p><strong>Supply constraint:</strong> Rua de São Bento is a heritage street — virtually impossible to develop new boutique hotel from scratch. The Verse occupies a <strong>non-replicable position</strong> in one of Europe's fastest-growing city destinations.</p>
+  </div>
+</div>
+
+<!-- MỤC 3: OPERATING MODEL -->
+<div class="sec">
+  <div class="sec-label">Section 03</div>
+  <h2 class="sec-title">Operating Model — Hold &amp; Operate Projection</h2>
+
+  <table>
+    <thead><tr><th>Metric</th><th>Year 1 (Ramp)</th><th>Year 2 (Stabilized)</th><th>Year 3 (Optimized)</th></tr></thead>
+    <tbody>
+      <tr><td>Occupancy</td><td>72%</td><td>78%</td><td>82%</td></tr>
+      <tr><td>ADR (EUR)</td><td>€290</td><td>€320</td><td>€345</td></tr>
+      <tr><td>RevPAR</td><td>€209</td><td>€250</td><td>€283</td></tr>
+      <tr><td>Room Revenue</td><td>€1,143K</td><td>€1,368K</td><td>€1,548K</td></tr>
+      <tr><td>Lobby Bar F&amp;B</td><td>€150K</td><td>€195K</td><td>€230K</td></tr>
+      <tr class="hi2"><td>Total Revenue</td><td>€1,293K</td><td>€1,563K</td><td>€1,778K</td></tr>
+      <tr><td>Dept. costs (~55%)</td><td>€711K</td><td>€859K</td><td>€978K</td></tr>
+      <tr class="hi2"><td>EBITDA (~45% margin)</td><td>€582K</td><td>€704K</td><td>€800K</td></tr>
+    </tbody>
+  </table>
+
+  <div class="warn">
+    <p><strong>Note:</strong> All projections are [ASSUMED] — no actual P&L available until NDA executed. ADR assumption of €290–345 is based on The Verse's positioning (9.7 rating, NYT/Condé Nast coverage) at 30–40% premium to market average of €143 ADR (Lisbon STR/hotel market). Verify against actual 2025 data post-NDA.</p>
+  </div>
+
+  <h3 style="font-size:14px;font-weight:bold;color:var(--navy);margin:20px 0 12px">10-Year Unlevered Returns</h3>
+  <table>
+    <thead><tr><th>Entry Price</th><th>Cap Rate (Y2)</th><th>10Y Income</th><th>Exit (10× EBITDA Y3)</th><th>Total Return</th><th>IRR (unlevered)</th></tr></thead>
+    <tbody>
+      <tr class="hi2"><td>€4.5M</td><td>15.6%</td><td>€6.5M</td><td>€8.0M</td><td>~€14.5M</td><td><strong>~19%</strong></td></tr>
+      <tr class="hi"><td>€5.0M ← Base</td><td>14.1%</td><td>€6.5M</td><td>€8.0M</td><td>~€14.5M</td><td><strong>~17%</strong></td></tr>
+      <tr><td>€5.5M</td><td>12.8%</td><td>€6.5M</td><td>€8.0M</td><td>~€14.5M</td><td><strong>~14%</strong></td></tr>
+      <tr><td>€6.5M</td><td>10.8%</td><td>€6.5M</td><td>€8.0M</td><td>~€14.5M</td><td><strong>~11%</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MỤC 4: BUYER PROFILES -->
+<div class="sec">
+  <div class="sec-label">Section 04</div>
+  <h2 class="sec-title">Target Buyer Profiles</h2>
+
+  <div class="dark">
+    <div class="dtag">Who Buys This Asset</div>
+    <p>The Verse is <strong>not an institutional deal</strong> — it's too small for REITs, too boutique for chains. The right buyer is a <strong>high-net-worth individual or family office</strong> with either lifestyle motivation or hospitality operator experience. The editorial validation (NYT, Condé Nast) significantly expands the buyer universe to include non-traditional investors who value cultural cachet.</p>
+  </div>
+
+  <div class="buyer-grid">
+    <div class="buyer-card">
+      <span class="fit high">HIGH FIT</span>
+      <h4>HNWI / Family Office — Lifestyle Investor</h4>
+      <p>Wealth from tech, finance, or real estate. Wants a trophy asset in a European city they love. Drawn to the NYT/Condé Nast story. Likely already staying at properties like this. Will hire professional ops team. Happy with 8–12% yield as secondary to ownership pride.</p>
+      <p style="margin-top:8px;color:var(--blue);font-size:12px;font-weight:bold">Geographic origin: US, UK, Middle East, SE Asia</p>
+    </div>
+    <div class="buyer-card">
+      <span class="fit high">HIGH FIT</span>
+      <h4>Independent Boutique Operator</h4>
+      <p>Experienced operator seeking to expand their collection of design-led properties. Values the unencumbered freehold and editorial platform. Can unlock synergies with existing portfolio (shared reservations, marketing, F&amp;B buying). Likely to rebrand or co-brand under their collection.</p>
+      <p style="margin-top:8px;color:var(--blue);font-size:12px;font-weight:bold">Examples: Experimental Group, Zannier, Small Luxury Hotels</p>
+    </div>
+    <div class="buyer-card">
+      <span class="fit high">HIGH FIT — RCC</span>
+      <h4>Asian Hospitality Group (Hold &amp; Operate)</h4>
+      <p>UHNW individual or hospitality group from VN/SEA seeking European flagship asset. The editorial value provides instant positioning for global brand building. Lisbon's growing Asian visitor base (China +14.3% in 2025) creates natural demand alignment. Operating income + EUR asset appreciation = dual return.</p>
+      <p style="margin-top:8px;color:var(--green);font-size:12px;font-weight:bold">RCC profile matches this buyer archetype</p>
+    </div>
+    <div class="buyer-card" style="border-top-color:var(--amber)">
+      <span class="fit med">MEDIUM FIT</span>
+      <h4>Boutique Hotel Fund / PE</h4>
+      <p>Small hospitality PE fund or club deal targeting European lifestyle assets. Needs minimum IRR of 15%+ on levered basis. 15 keys may be too small for fund minimum thresholds. Going concern option preferred (EBITDA multiple basis). Exit to institutional in 5–7 years.</p>
+    </div>
+    <div class="buyer-card" style="border-top-color:var(--amber)">
+      <span class="fit med">MEDIUM FIT</span>
+      <h4>Digital Nomad / Remote Work Operator</h4>
+      <p>New wave operators converting boutique hotels into extended-stay residences with co-working. Lisbon is Europe's top digital nomad destination. Could reposition The Verse at €3,000–5,000/month per apartment, dramatically improving yield. Niche but high-growth segment.</p>
+    </div>
+    <div class="buyer-card" style="border-top-color:var(--red)">
+      <span class="fit" style="background:#fdf0f0;color:var(--red)">LOW FIT</span>
+      <h4>Institutional / REIT</h4>
+      <p>15 keys is below minimum lot size for most institutional hospitality funds (typically €15M+). Limited track record (15 months). Not suitable for REIT structures. Would only make sense as part of a larger portfolio acquisition.</p>
+    </div>
+  </div>
+</div>
+
+<!-- MỤC 5: HOLD & OPERATE STRATEGY -->
+<div class="sec">
+  <div class="sec-label">Section 05</div>
+  <h2 class="sec-title">Hold &amp; Operate Strategy — Value Creation Levers</h2>
+
+  <table>
+    <thead><tr><th>Lever</th><th>Current State</th><th>Opportunity</th><th>Est. EBITDA Impact</th></tr></thead>
+    <tbody>
+      <tr><td>Direct booking program</td><td>OTA-heavy</td><td>15–20% direct booking shift → lower OTA commission (~15–18%)</td><td>+€40–60K/yr</td></tr>
+      <tr><td>Dynamic yield management</td><td>Unknown</td><td>Professional PMS + yield tool → +8–15% RevPAR</td><td>+€60–100K/yr</td></tr>
+      <tr><td>F&amp;B expansion</td><td>Lobby bar only</td><td>Private dining, buyout events, breakfast program</td><td>+€80–120K/yr</td></tr>
+      <tr><td>Brand affiliation</td><td>Independent</td><td>Mr &amp; Mrs Smith / Design Hotels membership → ADR premium</td><td>+€30–50K/yr</td></tr>
+      <tr><td>Corporate &amp; buyout</td><td>None visible</td><td>Full property buyout for events, retreats, filming</td><td>+€40–80K/yr</td></tr>
+      <tr class="hi2"><td>Total optimization upside</td><td>—</td><td>All levers combined</td><td><strong>+€250–410K/yr</strong></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MỤC 6: NEGOTIATION -->
+<div class="sec">
+  <div class="sec-label">Section 06</div>
+  <h2 class="sec-title">Transaction Structure &amp; Negotiation Strategy</h2>
+
+  <div class="grid2">
+    <div>
+      <h3 style="font-size:14px;font-weight:bold;color:var(--navy);margin-bottom:12px">Recommended: Going Concern</h3>
+      <table>
+        <thead><tr><th>Element</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Structure</td><td>Company acquisition (share purchase)</td></tr>
+          <tr><td>Tax advantage</td><td>IMT (6–7%) potentially avoided</td></tr>
+          <tr><td>Brand continuity</td><td>Retain "The Verse" IP, social, press contacts</td></tr>
+          <tr><td>Team</td><td>Retain ops manager + front desk 12 months minimum</td></tr>
+          <tr><td>Forward bookings</td><td>Transfer at face value at close</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <h3 style="font-size:14px;font-weight:bold;color:var(--navy);margin-bottom:12px">Price Anchoring</h3>
+      <table>
+        <thead><tr><th>Position</th><th>Price</th><th>Rationale</th></tr></thead>
+        <tbody>
+          <tr><td>Open bid</td><td>€4.2M</td><td>15-month track record = risk discount</td></tr>
+          <tr class="hi"><td>Target close</td><td>€4.8–5.0M</td><td>Stabilized cap rate 12–14%</td></tr>
+          <tr><td>Walk-away</td><td>€5.8M</td><td>IRR drops below 12% unlevered</td></tr>
+          <tr><td>Earnout suggestion</td><td>10–15% deferred</td><td>Tied to Y1 EBITDA post-close</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <ol class="neg-list" style="margin-top:20px">
+    <li><div class="neg-num">01</div><div><strong>Probe the exit motivation first</strong><span>"Why are you selling 15 months after opening?" — the answer shapes your entire negotiation posture. Positive answer (founder exit, new project) → pay closer to ask. Negative answer (cash pressure, ops issues) → leverage hard.</span></div></li>
+    <li><div class="neg-num">02</div><div><strong>15-month discount: apply 20–25% vs. fully-stabilized comp</strong><span>Market comparable (fully stabilized boutique Lisbon) trades at €300–380K/key. 15-month track record = not fully stabilized → justify 20–25% discount to target €250–300K/key = €3.75–4.5M.</span></div></li>
+    <li><div class="neg-num">03</div><div><strong>Request deferred payment structure</strong><span>Offer: 85% at close + 15% deferred 12 months subject to EBITDA threshold. Protects against undisclosed operational issues. Seller with clean books will accept. Seller with hidden problems will resist — that's your signal.</span></div></li>
+    <li><div class="neg-num">04</div><div><strong>Staff retention as closing condition</strong><span>The ops manager and front desk team built that 9.7 rating. Make retention of key staff (minimum 12 months) a non-negotiable closing condition, not a side letter.</span></div></li>
+    <li><div class="neg-num">05</div><div><strong>IP &amp; brand assets must transfer completely</strong><span>Domain, Instagram, all press contacts, booking platform profiles (Booking.com, Mr &amp; Mrs Smith, Tablet Hotels) — all must transfer at close. The brand equity is in those profiles.</span></div></li>
+  </ol>
+</div>
+
+<!-- MỤC 7: VERDICT -->
+<div class="sec">
+  <div class="sec-label">Section 07</div>
+  <h2 class="sec-title">Verdict &amp; Recommended Action Plan</h2>
+
+  <div class="vgrid">
+    <div class="vcard go">
+      <div class="vtag">Strengths</div>
+      <h4>✅ Rare Combination of Quality Signals</h4>
+      <p>NYT + Condé Nast editorial in 15 months is genuinely exceptional — editorial teams rarely cover <15-room properties unless the product is world-class. 9.7 Booking score + Mr &amp; Mrs Smith listing = product quality validated externally. Freehold unencumbered = full strategic flexibility.</p>
+    </div>
+    <div class="vcard cau">
+      <div class="vtag">Key Risk</div>
+      <h4>⚠ Why Is It For Sale After 15 Months?</h4>
+      <p>This is the only question that matters before NDA. 15 months post-opening is too early for a strategic exit unless: (a) founder needs capital for next project, or (b) there's an undisclosed operational or financial issue. Due diligence must resolve this completely.</p>
+    </div>
+    <div class="vcard inf">
+      <div class="vtag">Financial Target</div>
+      <h4>📋 Entry: €4.5–5.0M · Exit: €8M+ (10Y)</h4>
+      <p>At €5M entry, unlevered IRR ≈ 17% over 10 years with optimization. With leverage (50–60% LTV, EUR rate ~4.5%), equity IRR increases to 22–28%. Breakeven occupancy at base EBITDA: ~55%.</p>
+    </div>
+    <div class="vcard go">
+      <div class="vtag">RCC Strategic Fit</div>
+      <h4>🌍 European Flagship + Brand Platform</h4>
+      <p>Acquiring The Verse gives RCC a European editorial platform to amplify Vietnam hospitality projects globally. The NYT/Condé Nast relationship = credibility asset that travels. Lisbon's growing Asian visitor market (China +14%) is natural demand alignment for RCC's network.</p>
+    </div>
+  </div>
+
+  <h3 style="font-size:14px;font-weight:bold;color:var(--navy);margin:24px 0 12px">Action Plan</h3>
+  <ul class="timeline">
+    <li><div class="tl-dot go">1</div><div class="tl-content"><strong>Execute NDA — This Week</strong><span>Request: monthly P&L 2025, occupancy by month, forward reservations, balance sheet, ownership structure, exit motivation, property licence type (AL vs. hotel).</span></div></li>
+    <li><div class="tl-dot go">2</div><div class="tl-content"><strong>Financial Validation — Within 2 Weeks of NDA</strong><span>Verify ADR, occupancy, EBITDA against projections. Check if forward bookings align with seasonality curve. Run sensitivity: if actual ADR is €220 instead of €290, what's the cap rate?</span></div></li>
+    <li><div class="tl-dot am">3</div><div class="tl-content"><strong>Site Visit — Before LOI</strong><span>Walk the property. Meet ops manager. Assess brand delivery vs. online reputation. Check condition of FF&E, building fabric, tech stack.</span></div></li>
+    <li><div class="tl-dot am">4</div><div class="tl-content"><strong>LOI at €4.5M (Going Concern) — Week 4–6</strong><span>Non-binding. Include: deferred payment clause, staff retention condition, full IP transfer. Negotiate to close at €4.8–5.0M.</span></div></li>
+    <li><div class="tl-dot bl">5</div><div class="tl-content"><strong>DD &amp; Close — 60–90 Days</strong><span>Legal DD: title, planning permissions, licences, employment contracts, pending litigation. Financial DD: tax filings, VAT returns, supplier contracts. Close on going concern basis.</span></div></li>
+  </ul>
+
+  <div style="margin-top:24px;padding:20px 24px;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--green)">
+    <p style="font-size:15px;color:var(--navy);font-weight:bold;margin-bottom:8px">Bottom Line</p>
+    <p style="font-size:13.5px;color:var(--muted);line-height:1.7">The Verse is a <strong style="color:var(--navy)">scarce, high-quality asset</strong> in a supply-constrained prime location. The editorial validation is the single most undervalued element in the teaser — it takes years and luck to achieve what this property has done in 15 months. <strong style="color:var(--navy)">At €4.8–5.0M going concern, this is a compelling European hold-and-operate acquisition.</strong> The exit motivation question must be resolved before any commitment, but if the answer is benign, move quickly — assets with this profile rarely stay on market long.</p>
+  </div>
+</div>
+
+<!-- MAP -->
+<div class="sec">
+  <div class="sec-label">Section 08</div>
+  <h2 class="sec-title">Location</h2>
+  <div style="border:1px solid var(--border);background:var(--white);padding:14px">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d700!2d-9.1490!3d38.7120!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1934974a4a7661%3A0x6f4d8e7b3f5a2c1d!2s39%20Rua%20de%20S%C3%A3o%20Bento%2C%201200-189%20Lisboa!5e1!3m2!1sen!2spt!4v1680000000002"
+      width="100%" height="320" style="border:none;display:block" allowfullscreen loading="lazy">
+    </iframe>
+    <p style="font-size:11px;color:var(--muted);margin-top:8px">39 Rua de São Bento, Misericórdia, Lisbon · Adjacent to Parliament · 10 min walk to Chiado &amp; Bairro Alto</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px;font-size:13px">
+    <div style="background:var(--white);border:1px solid var(--border);padding:12px;text-align:center"><div style="font-size:1.3rem;font-weight:bold;color:var(--navy)">10 min</div><div style="color:var(--muted)">to Chiado &amp; Bairro Alto</div></div>
+    <div style="background:var(--white);border:1px solid var(--border);padding:12px;text-align:center"><div style="font-size:1.3rem;font-weight:bold;color:var(--navy)">15 min</div><div style="color:var(--muted)">to Alfama &amp; Castelo</div></div>
+    <div style="background:var(--white);border:1px solid var(--border);padding:12px;text-align:center"><div style="font-size:1.3rem;font-weight:bold;color:var(--navy)">Parliament</div><div style="color:var(--muted)">Directly opposite</div></div>
+    <div style="background:var(--white);border:1px solid var(--border);padding:12px;text-align:center"><div style="font-size:1.3rem;font-weight:bold;color:var(--navy)">Heritage</div><div style="color:var(--muted)">No new supply possible</div></div>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  <div>
+    <p class="fb">NOVA · Property &amp; Project Analyst · RCC Strategic Advisory</p>
+    <p>03/04/2026 · Confidential — For Qualified Investors Only</p>
+  </div>
+  <span class="pill a">PRE-NDA ANALYSIS</span>
+</div>
+
+</body>
+</html>
