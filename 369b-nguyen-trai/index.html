@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Investment Briefing — 369B Nguyễn Trãi, Q1</title>
+<style>
+:root{
+  --navy:#0a1628;--navy2:#0f2040;--gold:#c9a84c;--gold2:#e8d48a;
+  --white:#fff;--cream:#f8f6f0;--text:#1a1a2e;--muted:#666680;
+  --border:#ddd8cc;--lgray:#f4f4f8;--red:#c0392b;--green:#1a7a4a;
+  --amber:#b87000;--blue:#1a4fa0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,serif;background:var(--cream);color:var(--text);line-height:1.75}
+.header{background:var(--navy);padding:48px 40px 36px;position:relative}
+.header::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--gold),var(--gold2),var(--gold))}
+.htag{display:inline-block;border:1px solid var(--gold);color:var(--gold);
+  font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  padding:5px 16px;margin-bottom:20px}
+.header h1{color:var(--white);font-size:1.9rem;font-weight:normal;margin-bottom:6px}
+.header h1 span{color:var(--gold)}
+.header p{color:rgba(255,255,255,.5);font-family:Arial,sans-serif;font-size:12px;letter-spacing:1px}
+.container{max-width:920px;margin:0 auto;padding:44px 24px 80px}
+.sec{margin-bottom:48px}
+.sec-label{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);margin-bottom:5px}
+.sec-title{font-size:1.3rem;font-weight:normal;color:var(--navy);
+  border-bottom:1px solid var(--border);padding-bottom:11px;margin-bottom:22px}
+/* CARDS */
+.stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px}
+@media(max-width:640px){.stat-grid{grid-template-columns:1fr 1fr}}
+.stat-card{background:var(--white);border:1px solid var(--border);border-top:3px solid var(--gold);padding:16px 18px}
+.stat-card .slabel{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;color:var(--muted);margin-bottom:5px}
+.stat-card .sval{font-size:1.4rem;font-weight:bold;color:var(--navy)}
+.stat-card .ssub{font-family:Arial,sans-serif;font-size:11px;color:var(--muted);margin-top:3px}
+.stat-card.red{border-top-color:var(--red)} .stat-card.red .sval{color:var(--red)}
+.stat-card.green{border-top-color:var(--green)} .stat-card.green .sval{color:var(--green)}
+.stat-card.amber{border-top-color:var(--amber)} .stat-card.amber .sval{color:var(--amber)}
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-family:Arial,sans-serif;font-size:13.5px;margin:16px 0}
+thead tr{background:var(--navy);color:var(--white)}
+thead th{padding:11px 14px;text-align:left;font-weight:normal;letter-spacing:.4px}
+tbody tr:nth-child(odd){background:var(--lgray)}
+tbody tr:nth-child(even){background:var(--white)}
+tbody tr.highlight{background:#fff8e8;font-weight:bold}
+tbody td{padding:10px 14px;border-bottom:1px solid var(--border)}
+tbody td:first-child{color:var(--navy);font-weight:bold}
+/* YIELD VISUAL */
+.yield-bar-wrap{margin:6px 0 2px}
+.yield-bar{height:8px;border-radius:4px;display:inline-block;vertical-align:middle}
+/* INFO BOX */
+.info-box{padding:20px 24px;margin:20px 0;border-left:3px solid var(--gold);background:var(--white)}
+.info-box p{font-size:14.5px;color:var(--text);margin-bottom:8px}
+.info-box p:last-child{margin-bottom:0}
+.info-box strong{color:var(--navy)}
+/* DARK BOX */
+.dark-box{background:var(--navy);padding:22px 26px;margin:20px 0}
+.dark-box .dtag{font-family:Arial,sans-serif;font-size:10px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.dark-box p{font-family:Arial,sans-serif;font-size:14px;color:rgba(255,255,255,.85);line-height:1.7}
+.dark-box strong{color:var(--gold2)}
+/* QH MAP */
+.qh-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0}
+@media(max-width:600px){.qh-row{grid-template-columns:1fr}}
+.qh-card{padding:14px 16px;border:1px solid var(--border);background:var(--white)}
+.qh-card .dot{width:16px;height:16px;border-radius:2px;display:inline-block;
+  margin-right:8px;vertical-align:middle}
+.qh-card .qname{font-size:13.5px;color:var(--navy);font-weight:bold;vertical-align:middle}
+.qh-card .qdesc{font-family:Arial,sans-serif;font-size:12px;color:var(--muted);margin-top:6px}
+/* NEGOTIATE */
+.neg-list{list-style:none;padding:0;margin-top:16px}
+.neg-list li{display:flex;gap:14px;padding:14px 16px;background:var(--white);
+  border:1px solid var(--border);margin-bottom:10px;font-family:Arial,sans-serif;font-size:13.5px}
+.neg-num{background:var(--navy);color:var(--gold);font-weight:bold;
+  min-width:28px;height:28px;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:13px}
+.neg-list li strong{color:var(--navy);display:block;margin-bottom:3px}
+.neg-list li span{color:var(--muted)}
+/* VERDICT */
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+@media(max-width:600px){.verdict-grid{grid-template-columns:1fr}}
+.verdict-card{padding:16px 18px;border:1px solid var(--border)}
+.verdict-card .vtag{font-family:Arial,sans-serif;font-size:10px;letter-spacing:2px;
+  text-transform:uppercase;margin-bottom:6px}
+.verdict-card h4{font-size:14px;color:var(--navy);margin-bottom:8px}
+.verdict-card p{font-family:Arial,sans-serif;font-size:12.5px;color:var(--muted);line-height:1.6}
+.verdict-card.go{border-top:3px solid var(--green);background:#f0fbf4}
+.verdict-card.go .vtag{color:var(--green)}
+.verdict-card.caution{border-top:3px solid var(--amber);background:#fffdf0}
+.verdict-card.caution .vtag{color:var(--amber)}
+.verdict-card.no{border-top:3px solid var(--red);background:#fdf0f0}
+.verdict-card.no .vtag{color:var(--red)}
+.verdict-card.info{border-top:3px solid var(--blue);background:#f0f4ff}
+.verdict-card.info .vtag{color:var(--blue)}
+/* FOOTER */
+.footer{background:var(--navy);padding:24px 40px;display:flex;justify-content:space-between;
+  align-items:center;flex-wrap:wrap;gap:12px}
+.footer p{font-family:Arial,sans-serif;font-size:11px;color:rgba(255,255,255,.35);letter-spacing:.8px}
+.footer .fbrand{color:var(--gold);font-size:12px}
+.tag{display:inline-block;font-family:Arial,sans-serif;font-size:10px;letter-spacing:1px;
+  padding:3px 10px;border:1px solid;font-weight:bold}
+.tag.green{color:var(--green);border-color:var(--green);background:#f0fbf4}
+.tag.amber{color:var(--amber);border-color:var(--amber);background:#fffdf0}
+.tag.red{color:var(--red);border-color:var(--red);background:#fdf0f0}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="htag">RCC Strategic Advisory · Confidential · 03/04/2026</div>
+  <h1>Investment Briefing<br><span>369B Nguyễn Trãi, Quận 1</span></h1>
+  <p>Phường Nguyễn Cư Trinh · TP. Hồ Chí Minh · Góc 2 mặt tiền</p>
+</div>
+
+<div class="container">
+
+<!-- MỤC 1: THÔNG TIN TÀI SẢN -->
+<div class="sec">
+  <div class="sec-label">Mục 01</div>
+  <h2 class="sec-title">Thông Tin Tài Sản</h2>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="slabel">Giá Chào</div><div class="sval">458 tỷ</div><div class="ssub">VND</div></div>
+    <div class="stat-card"><div class="slabel">Diện Tích Đất</div><div class="sval">387 m²</div><div class="ssub">15m × 30m</div></div>
+    <div class="stat-card"><div class="slabel">Tổng Sàn (GFA)</div><div class="sval">3,250 m²</div><div class="ssub">2 hầm + 10 tầng</div></div>
+    <div class="stat-card amber"><div class="slabel">Giá/m² Đất</div><div class="sval">1,183 tr</div><div class="ssub">≈ $47,000/m²</div></div>
+    <div class="stat-card"><div class="slabel">Giá Thuê</div><div class="sval">$35,000</div><div class="ssub">~922 tr VND/tháng</div></div>
+    <div class="stat-card"><div class="slabel">Hợp Đồng Thuê</div><div class="sval">15 năm</div><div class="ssub">Bệnh viện thẩm mỹ Thái Lan</div></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Tiêu Chí</th><th>Chi Tiết</th></tr></thead>
+    <tbody>
+      <tr><td>Vị trí</td><td>Góc Nguyễn Trãi × Nguyễn Cảnh Chân — 2 mặt tiền, Quận 1</td></tr>
+      <tr><td>Pháp lý</td><td>Sổ hồng cá nhân · Hoàn công · PCCC đầy đủ</td></tr>
+      <tr><td>Hiện trạng</td><td>Cho thuê 2 hầm + 8 tầng · Chủ ở 2 tầng trên</td></tr>
+      <tr><td>Tenant</td><td>Bệnh viện thẩm mỹ Thái Lan — ký HĐ 15 năm</td></tr>
+      <tr><td>Tỷ giá</td><td>26,340 VND/USD</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- MỤC 2: PHÂN TÍCH QUY HOẠCH -->
+<div class="sec">
+  <div class="sec-label">Mục 02</div>
+  <h2 class="sec-title">Phân Tích Quy Hoạch <span style="font-size:.85rem;color:var(--muted)">(Bản đồ 1/2000 · sqhkt-qlqh.tphcm.gov.vn)</span></h2>
+
+  <div class="dark-box">
+    <div class="dtag">Giả Định Phân Tích</div>
+    <p>Chiều cao hiện tại <strong>(10 tầng + 2 hầm)</strong> và GFA thực tế <strong>(3,250 m²)</strong> được xem là mức tối đa cho phép theo quy hoạch. Phân tích tài chính dựa trên giả định này.</p>
+  </div>
+
+  <div class="qh-row">
+    <div class="qh-card">
+      <span class="dot" style="background:rgb(165,124,0)"></span><span class="qname">Đất Ở</span>
+      <div class="qdesc">Pixel chính xác tại tọa độ 369B — phân loại chính của thửa đất</div>
+    </div>
+    <div class="qh-card">
+      <span class="dot" style="background:rgb(255,0,0)"></span><span class="qname">Công Trình CC Đô Thị</span>
+      <div class="qdesc">Màu chủ đạo vùng lân cận — phù hợp với mục đích bệnh viện thẩm mỹ</div>
+    </div>
+    <div class="qh-card">
+      <span class="dot" style="background:rgb(33,38,19)"></span><span class="qname">An Ninh - Quốc Phòng</span>
+      <div class="qdesc">Vùng xung quanh — khu Quân khu 7 tiếp giáp. Cần xác nhận hành lang</div>
+    </div>
+    <div class="qh-card" style="border-top:3px solid var(--amber)">
+      <span class="qname" style="color:var(--amber)">⚠ Cần Xác Minh</span>
+      <div class="qdesc" style="margin-top:8px">FAR, chiều cao tối đa, hành lang ANQP → Phòng QLĐT Quận 1</div>
+    </div>
+  </div>
+</div>
+
+<!-- MỤC 3: PHÂN TÍCH YIELD -->
+<div class="sec">
+  <div class="sec-label">Mục 03</div>
+  <h2 class="sec-title">Phân Tích Yield & Tính Ngược Giá Mua</h2>
+
+  <div class="stat-grid">
+    <div class="stat-card"><div class="slabel">Doanh Thu Thuê/Năm</div><div class="sval">11.06 tỷ</div><div class="ssub">35,000 × 26,340 × 12</div></div>
+    <div class="stat-card red"><div class="slabel">Chi Phí (Thuế + BT)</div><div class="sval">663 tr</div><div class="ssub">Thuế 553tr + BT 110tr</div></div>
+    <div class="stat-card green"><div class="slabel">Thu Nhập Ròng/Năm</div><div class="sval">10.40 tỷ</div><div class="ssub">Net income sau chi phí</div></div>
+  </div>
+
+  <table>
+    <thead><tr><th>Yield Target</th><th>Giá Mua Tối Đa</th><th>Giá/m² Đất</th><th>Giá/m² Sàn</th><th>vs. Giá Chào</th></tr></thead>
+    <tbody>
+      <tr><td>4.0%</td><td>260 tỷ</td><td>672 tr/m²</td><td>80 tr/m²</td><td style="color:var(--red)">−43%</td></tr>
+      <tr><td>4.5%</td><td>231 tỷ</td><td>597 tr/m²</td><td>71 tr/m²</td><td style="color:var(--red)">−50%</td></tr>
+      <tr class="highlight"><td>5.0% ◀ TARGET</td><td><strong>208 tỷ</strong></td><td>537 tr/m²</td><td>64 tr/m²</td><td style="color:var(--red)"><strong>−55%</strong></td></tr>
+      <tr><td>5.5%</td><td>189 tỷ</td><td>489 tr/m²</td><td>58 tr/m²</td><td style="color:var(--red)">−59%</td></tr>
+      <tr><td>6.0%</td><td>173 tỷ</td><td>448 tr/m²</td><td>53 tr/m²</td><td style="color:var(--red)">−62%</td></tr>
+    </tbody>
+  </table>
+
+  <div class="info-box">
+    <p><strong>Nhận định:</strong> Giá chào 458 tỷ cho yield chỉ <strong>2.27%</strong> — thấp hơn gửi bank (~5%). Để đạt yield 5%, giá mua tối đa là <strong>208 tỷ</strong>, tức cần negotiate giảm <strong>55%</strong> so với giá chào. Đây là mức không thực tế với prime asset Quận 1.</p>
+    <p><strong>Kết luận:</strong> Asset này <strong>KHÔNG phải deal yield</strong>. Giá trị nằm ở <strong>capital appreciation</strong> và <strong>vị trí khan hiếm</strong> trung tâm Quận 1 — phù hợp với nhà đầu tư muốn hold 10–15 năm.</p>
+  </div>
+</div>
+
+<!-- MỤC 4: CHIẾN LƯỢC ĐÀM PHÁN -->
+<div class="sec">
+  <div class="sec-label">Mục 04</div>
+  <h2 class="sec-title">Chiến Lược Đàm Phán Giá</h2>
+
+  <div class="dark-box">
+    <div class="dtag">Định Vị Đàm Phán</div>
+    <p>Mục tiêu không phải negotiate về mức yield 5% (không khả thi). Mục tiêu là <strong>đưa giá về vùng 350–400 tỷ</strong> — mức mà prime asset Quận 1 justify được, và yield ~2.6–2.97% vẫn hợp lý khi kỳ vọng đất tăng 5–7%/năm.</p>
+  </div>
+
+  <ol class="neg-list">
+    <li>
+      <div class="neg-num">01</div>
+      <div>
+        <strong>Anchor bằng Yield Analysis</strong>
+        <span>Trình bày rõ: giá 458 tỷ cho yield 2.27% — thấp hơn lãi suất tiết kiệm. Đề xuất giá mua phù hợp thị trường: <strong>~380–400 tỷ</strong> (yield ~2.6%).</span>
+      </div>
+    </li>
+    <li>
+      <div class="neg-num">02</div>
+      <div>
+        <strong>Leverage vấn đề 2 tầng trên</strong>
+        <span>Chủ đang ở 2 tầng trên = <strong>buyer không toàn quyền ngay</strong>. Đây là điểm yếu pháp lý — yêu cầu discount ~20–30 tỷ hoặc chủ phải dọn trước khi bàn giao.</span>
+      </div>
+    </li>
+    <li>
+      <div class="neg-num">03</div>
+      <div>
+        <strong>Lock-in 15 năm — rủi ro lạm phát</strong>
+        <span>HĐ thuê USD 15 năm là rủi ro 2 chiều. Nếu USD yếu đi, doanh thu VND thực giảm. Yêu cầu <strong>escalation clause</strong> trong HĐ hoặc reflect rủi ro vào giá mua (−15–20 tỷ).</span>
+      </div>
+    </li>
+    <li>
+      <div class="neg-num">04</div>
+      <div>
+        <strong>Rủi ro quy hoạch cận ANQP</strong>
+        <span>Vùng xung quanh có phân loại An ninh - Quốc phòng → hạn chế phát triển tương lai. Đây là leverage để yêu cầu giảm giá thêm ~10–15 tỷ, pending kết quả xác minh tại UBND Quận 1.</span>
+      </div>
+    </li>
+    <li>
+      <div class="neg-num">05</div>
+      <div>
+        <strong>Thanh toán nhanh = đòn leverage</strong>
+        <span>Nếu anh có thể thanh toán 100% cash trong 30 ngày → đề nghị discount 3–5% (tương đương 14–23 tỷ). Chủ nhà thường accept vì tránh được rủi ro deal fall-through.</span>
+      </div>
+    </li>
+    <li>
+      <div class="neg-num">06</div>
+      <div>
+        <strong>Walk-away price rõ ràng</strong>
+        <span>Set walk-away ở <strong>420 tỷ</strong> (yield 2.47%). Trên mức này → không deal. Dưới → xem xét với điều kiện giải quyết được vấn đề 2 tầng trên.</span>
+      </div>
+    </li>
+  </ol>
+</div>
+
+<!-- MỤC 5: VERDICT -->
+<div class="sec">
+  <div class="sec-label">Mục 05</div>
+  <h2 class="sec-title">Kết Luận & Khuyến Nghị</h2>
+
+  <div class="verdict-grid">
+    <div class="verdict-card go">
+      <div class="vtag">Điểm Mạnh</div>
+      <h4>✅ Nên Quan Tâm</h4>
+      <p>Prime asset 2 mặt tiền Quận 1 cực hiếm · Pháp lý sạch · Tenant chất lượng · Dòng tiền $35K/tháng ngay lập tức · Hold 10+ năm sẽ thắng lớn</p>
+    </div>
+    <div class="verdict-card caution">
+      <div class="vtag">Điều Kiện</div>
+      <h4>⚠ Phụ Thuộc Đàm Phán</h4>
+      <p>Chỉ hợp lý ở mức <strong>380–420 tỷ</strong> · Cần xử lý 2 tầng trên · Verify hành lang ANQP · Thêm escalation clause vào HĐ thuê</p>
+    </div>
+    <div class="verdict-card no">
+      <div class="vtag">Không Phù Hợp</div>
+      <h4>❌ Nếu Cần Yield Cao</h4>
+      <p>Yield 2.27% thấp hơn gửi bank · Không phải cash-flow play · Không phù hợp nếu cần leverage ngân hàng cao (yield quá thấp để debt service)</p>
+    </div>
+    <div class="verdict-card info">
+      <div class="vtag">Hành Động Ngay</div>
+      <h4>📋 Bước Tiếp Theo</h4>
+      <p>1. Phòng QLĐT Q1 — xin thông tin quy hoạch 1/500<br>2. Broker confirm: 2 tầng trên xử lý thế nào?<br>3. Offer: 380 tỷ, có thể lên 400 tỷ nếu chủ dọn 2 tầng trên</p>
+    </div>
+  </div>
+
+  <div style="margin-top:24px;padding:18px 22px;background:var(--white);border:1px solid var(--border);border-left:4px solid var(--navy)">
+    <p style="font-size:15px;color:var(--navy);font-weight:bold;margin-bottom:6px">Giá Mục Tiêu Đàm Phán: 380 tỷ VND</p>
+    <p style="font-family:Arial,sans-serif;font-size:13px;color:var(--muted)">Walk-away: 420 tỷ · Yield tại 380 tỷ: 2.74% · Yield tại 420 tỷ: 2.48%<br>
+    Đất tăng 5%/năm → Total return 10 năm: ~7.3% IRR (yield + appreciation)</p>
+  </div>
+</div>
+
+</div><!-- /container -->
+
+<div class="footer">
+  <div>
+    <p class="fbrand">Zera · RCC Strategic Advisory</p>
+    <p>03/04/2026 · Tài liệu nội bộ · Không phổ biến</p>
+  </div>
+  <div>
+    <span class="tag amber">PHÂN TÍCH SƠ BỘ</span>
+  </div>
+</div>
+
+</body>
+</html>
